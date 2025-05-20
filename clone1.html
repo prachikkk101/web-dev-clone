@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apple Clone</title>
+  <style>
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      background-color: #fff;
+      color: #1d1d1f;
+      line-height: 1.5;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid #d2d2d7;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 2rem;
+    }
+    header .logo {
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: black;
+      letter-spacing: 0.1em;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.7rem;
+    }
+    nav ul li a {
+      font-weight: 500;
+      font-size: 0.9rem;
+      padding: 0.5rem 0.2rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #0071e3;
+    }
+
+    /* Hero Section */
+    .hero {
+      margin-top: 60px; /* to avoid header overlap */
+      background: url('https://www.apple.com/v/home/ai/images/heroes/iphone-14-pro/hero_static__e85ks6kyhyqe_large_2x.jpg') no-repeat center/cover;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      padding: 0 2rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 0.3rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero a.btn {
+      background-color: #0071e3;
+      color: white;
+      padding: 0.7rem 2rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 4px 14px rgba(0, 113, 227, 0.39);
+      transition: background-color 0.3s ease;
+    }
+    .hero a.btn:hover {
+      background-color: #005bb5;
+    }
+
+    /* Products Section */
+    section.products {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .product-card {
+      border: 1px solid #d2d2d7;
+      border-radius: 14px;
+      padding: 1rem;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+      cursor: pointer;
+      background: #fafafa;
+    }
+    .product-card:hover {
+      box-shadow: 0 8px 24px rgb(0 0 0 / 0.15);
+    }
+    .product-card img {
+      margin-bottom: 1rem;
+      max-height: 150px;
+      object-fit: contain;
+    }
+    .product-card h3 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+    .product-card p {
+      font-size: 0.9rem;
+      color: #6e6e73;
+      margin-bottom: 1rem;
+    }
+    .product-card a {
+      color: #0071e3;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f5f5f7;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #6e6e73;
+      margin-top: 4rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">APPLE</div>
+    <nav>
+      <ul>
+        <li><a href="#">Mac</a></li>
+        <li><a href="#">iPad</a></li>
+        <li><a href="#">iPhone</a></li>
+        <li><a href="#">Watch</a></li>
+        <li><a href="#">TV</a></li>
+        <li><a href="#">Music</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>iPhone 14 Pro</h1>
+    <p>Pro. Beyond.</p>
+    <a href="#" class="btn">Learn more</a>
+  </section>
+
+  <section class="products">
+    <div class="product-card">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-pro-family-select?wid=200&hei=200&fmt=png-alpha&.v=1660753619946" alt="iPhone 14 Pro" />
+      <h3>iPhone 14 Pro</h3>
+      <p>Pro camera system, dynamic island, and more.</p>
+      <a href="#">Buy</a>
+    </div>
+    <div class="product-card">
+      <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-13-mac-nav-202503?wid=400&hei=260&fmt=png-alpha&.v=M1Q3OGxnb1lBaHhqNjZ2OVRXZmx4VEpBUDFBeEhMZS9GUnNSYXdEd0hscisrUlZaSVRoWVYzU0Qra0FoTmUwNng2bitObzZwQzk4cEorV1dZdzhIazVVcFlOTkdoMWg4ZkdDS1ovMUlzcW8" alt="MacBook Pro" />
+      <h3>MacBook Pro 14”</h3>
+      <p>Powerful M1 Pro chip and stunning Liquid Retina XDR display.</p>
+      <a href="#">Buy</a>
+    </div>
+    <div class="product-card">
+      <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-13-ipad-nav-202405?wid=400&hei=260&fmt=png-alpha&.v=dW5XbHI1eDVpd01qWUU4bFRtWGZXNGFLQTJVNnlNQmQrVmRBYnZYei9jckUzelNmMnRxajE0NHhmMWtLazl6eG53M0FRZHBXNTh1U1lFVEtSR2YzTm5qbE56RWRpRFNIRXZvbkd2S0l5dTg" alt="iPad Pro" />
+      <h3>iPad Pro</h3>
+      <p>Ultimate iPad experience with M1 chip.</p>
+      <a href="#">Buy</a>
+    </div>
+    <div class="product-card">
+      <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-13-watch-nav-202409?wid=400&hei=260&fmt=png-alpha&.v=S0tSVzBtSkRkSFFhMm1zS1NmeWtkNDJNVmlnVytwalkvOTJ2M1BKWUREdkh5NTJ6cGtEemJOblBHR043ZjFkZzAzOVFHb3N0MkVmS01ZcFh0d1Y4R2oxdUo4aWtyK05IRkZuWjBWbW5HM00" alt="Apple Watch Series 7" />
+      <h3>Apple Watch Series 7</h3>
+      <p>Largest and most advanced display yet.</p>
+      <a href="#">Buy</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Apple Clone. All rights reserved.
+  </footer>
+</body>
+</html>
